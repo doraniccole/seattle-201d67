@@ -74,7 +74,21 @@ uncomment the call for the testSumAndMultiply() function and see if the test pas
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    var answer = []; // creates empty array
+    parseInt(a) //makes a number
+    parseInt(b)
+    parseInt(c)
+    //var sum = (a, b)
+    //return a + b
+    //var multiply = (a,b)
+    //return a * b
+    answer[0] = sum(a, sum(b, c)); //naming first part - element- of array
+    //console.log(answer[0]);
+    answer[1] = multiply(a, multiply(b, c)); //second element of array
+    //console.log(answer[1]);
+    answer[2] = a + " and " + b + " and " + c + " sum to " + answer[0] + "."; //third element of array
+    answer[3] = "The product of " + a + " and " + b + " and " + c + " is " + answer[1] + "."; //fourth element of array
+    return [answer[0], answer[1], answer[2], answer[3]]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -100,15 +114,23 @@ Test this function by hand in the console to get it working, and when you think 
 uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
-
+//var testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
-
+    var num1 = sumArr[0];
+    var num2 = sumArr[1];
+    var num3 = sumArr[2];
+    var addA = sum(num1,num2);
+    var addB = sum(addA,num3);
+    console.log(addA);
+    console.log(addB);
+    return [addB, num1 + "," + num2 + "," + num3 + " was passed in as an array of numbers, and "  + addB + " is their sum."];
+    //var answer = [] //creates empty array
+    //for(i=0, i < sumArr.length, i++);
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 //Don't forget to create a new branch for your work on the next question!
@@ -131,8 +153,6 @@ uncomment the call for the testMultiplyArray() function and see if the test pass
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
-}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
