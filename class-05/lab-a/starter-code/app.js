@@ -13,13 +13,14 @@ uncomment the call for the testSum() function below and check the console to see
 
 
 function sum(a, b) { //eslint-disable-line
-var sum = a + b;
-//console.log(sum)
+    var sum = a + b;
+    //console.log(sum)
     var msg = "The sum of " + a + " and " + b + " is " + sum + ".";
     //console.log(msg)
-return [sum, msg];
+   // return [sum, msg];
+   return sum
 }
-sum(4,8)
+//sum(4,8)
 
 
 // Here is the test for sum(); uncomment it to run it
@@ -45,9 +46,10 @@ function multiply(a, b) { //eslint-disable-line
     //console.log(product)
     var msg2 = "The product of " + a + " and " + b + " is " + product + ".";
     //console.log(msg2)
-    return [product, msg2];
+    //return [product, msg2];
+    return product
 }
-multiply(5, 9)
+//multiply(5, 9)
 
 // Here is the test for multiply(); uncomment it to run it
 //testMultiply(5,9);
@@ -67,18 +69,34 @@ Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
 
 IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. 
-To do addition, use your sum() function, and to do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
+To do addition, use your sum() function, and to do multiplication, use your multiply() function that you've 
+already created. You're going to have to be resourceful to figure out how to do this. 
+However, you may continue to use the + operator for string concatenation.
 
 Test this function by hand in the console to get it working, and when you think it is finished, 
 uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    var answer = []; // creates empty array
+    parseInt(a) //makes a number
+    parseInt(b)
+    parseInt(c)
+    //var sum = (a, b)
+    //return a + b
+    //var multiply = (a,b)
+    //return a * b
+    answer[0] = sum(a,sum(b,c)); //naming first part - element- of array
+    //console.log(answer[0]);
+    answer[1] = multiply(a,multiply(b,c)); //second element of array
+    //console.log(answer[1]);
+    answer[2] = a + " and " + b + " and " + c + " sum to " + answer[0] + "."; //third element of array
+    answer[3] = "The product of " + a + " and " + b + " and " + c + " is " + answer[1] + "."; //fourth element of array
+    return [answer[0],answer[1],answer[2],answer[3]]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 //Don't forget to create a new branch for your work on the next question!
