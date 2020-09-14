@@ -1,0 +1,11 @@
+#pokemon1, #pokemon2 {
+  width: 200px;
+}
+
+#pokemon1 img, #pokemon2 img {
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
