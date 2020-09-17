@@ -1,0 +1,115 @@
+/* @import "reset.css"; */
+
+body {
+    width: 100vw;
+}
+
+header {
+    background-color: #333;
+    height: 85px;
+}
+
+header div {
+    margin: auto;
+    height: 100%;
+    width: 960px;
+}
+
+header img {
+    float: left;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    float: left;
+}
+
+header ul li {
+    float: left;
+}
+
+header ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 24px;
+        padding-left: 55px;
+        padding-right: 55px;
+        text-decoration: none;
+}
+
+main {
+    margin: auto;
+    width: 960px;
+}
+
+main > hero-image:first-child {
+    background-color: darkgreen;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+main > div:first-child {
+    background-color: darkgreen;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+main > div:nth-child(2) {
+    background-color: rgb(199, 108, 199);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+main > div:nth-child(2) img {
+    display: inline-block;
+}
+
+main > div:nth-child(2) > img:first-child {
+    float: left;
+}
+
+main > div:nth-child(2) > img:last-child {
+    float: right;
+}
+
+
+main > div:nth-child(2) > img:nth-child(2) {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+main > div:nth-child(3) {
+    background-color: darkslategrey;
+    height: 272px;
+}
+
+main > div:nth-child(3) > span {
+    float: left;
+    display: inline-block;
+    height: 100%;
+}
+
+main > div:nth-child(3) > span > img {
+    width: 50%;
+}
+
+main > div:nth-child(3) > div {
+    background-color: deepskyblue;
+}
+
+main > div:nth-child(3) > div p {
+    overflow: scroll;
+}
+
+
+footer {
+    background-color: crimson;
+    height: 200px;
+}
