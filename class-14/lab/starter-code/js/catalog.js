@@ -35,32 +35,34 @@ selectElement.add(option)
 
 function handleSubmit(event) {
 
-  // TODO: Prevent the page from reloading
+  // **DONE: Prevent the page from reloading
 event.preventDefault();
+//for (var i=0; i<=19; i++) {
 
-var itemName = event.target.selectedOptions[0].label;
-var quantity = event.target.quantity.value;;
-
-console.log(itemName, quantity);
+//var itemName = event.target.allProducts.name;
+//var quantity = event.target.quantity.value;
+//console.log(itemName, quantity);
   // Do all the things ...
-  addSelectedItemToCart(itemName, quantity);
+  addSelectedItemToCart();
   cart.saveToLocalStorage();
   updateCounter();
   updateCartPreview();
   
 }
-
+//}
 // **DONE: Add the selected item and quantity to the cart
   //typeof parseInt('Number');
   //console.log(typeof 5);
 
-function addSelectedItemToCart(itemName, quantity) {
+function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
   //document.getElementById('quantity');
  //var button = document.createElement('button');
- cart.addItem(itemName, quantity);
+ var product=document.getElementById('items').value;
+ var quantity=document.getElementById('quantity').value;
+ cart.addItem(product, quantity);
  
 }
 
