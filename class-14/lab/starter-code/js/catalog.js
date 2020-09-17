@@ -9,9 +9,13 @@ var cart = new Cart([]);
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
 
-  //TODO: Add an <option> tag inside the form's select for each product
+  //**DONE: Add an <option> tag inside the form's select for each product
   var selectElement = document.getElementById('items');
   for (var i in Product.allProducts) {
+//console.log (Product.allProducts[i].name);
+var option= document.createElement('option')
+option.textContent=Product.allProducts[i].name
+selectElement.add(option)
 
   }
 
@@ -20,23 +24,44 @@ function populateForm() {
 // When someone submits the form, we need to add the selected item to the cart
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
+
+//A dropdown menu of all BusMall products (<select> and <option> will be needed).
+//An input of type = "number" to indicate the quantity to purchase.
+ // An “Add to Cart” button to submit the order.When the order is submitted, all of the input fields should be cleared.
+//An animated confirmation message using CSS and JS, displayed when the order is submitted, plus a link to the shopping cart page.
+//Appropriate instructions and styling on the page.
+
+
+
 function handleSubmit(event) {
 
   // TODO: Prevent the page from reloading
+event.preventDefault();
 
+var itemName = event.target.selectedOptions[0].label;
+var quantity = event.target.quantity.value;;
+
+console.log(itemName, quantity);
   // Do all the things ...
-  addSelectedItemToCart();
+  addSelectedItemToCart(itemName, quantity);
   cart.saveToLocalStorage();
   updateCounter();
   updateCartPreview();
-
+  
 }
 
-// TODO: Add the selected item and quantity to the cart
-function addSelectedItemToCart() {
+// **DONE: Add the selected item and quantity to the cart
+  //typeof parseInt('Number');
+  //console.log(typeof 5);
+
+function addSelectedItemToCart(itemName, quantity) {
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
+  //document.getElementById('quantity');
+ //var button = document.createElement('button');
+ cart.addItem(itemName, quantity);
+ 
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
